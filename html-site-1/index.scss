@@ -1,0 +1,61 @@
+$bodycolor: #eee;
+$mainTextColor: #333;
+$headerBack: #333;
+$headerColor: #fff;
+$headers: #ed7000;
+$emColor: #5e5e5e;
+
+$mainFontSize: 14px;
+$mainFont: Helvetica, Arial, sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  background: #eee;
+}
+
+#container {
+  width: 700px;
+  margin: 0 auto;
+}
+
+#header,
+#footer {
+  background: #333;
+  color: $headerColor;
+  text-align: center;
+  padding: 30px;
+  margin: 0 10px 10px;
+}
+
+.lead-text {
+  color: #fff;
+}
+
+.blog-post {
+  padding: 30px;
+  background: #fff;
+  margin: 0 10px 10px;
+  color: $mainTextColor;
+
+  h2,
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  color: $headers;
+}
+
+em {
+  color: $emColor;
+}
