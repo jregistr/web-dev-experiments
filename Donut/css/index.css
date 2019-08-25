@@ -1,1 +1,32 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+/* Color Vars */
+/* General */
+body {
+  background: #f2f3ee url("/images/bg-tile.gif") top left repeat;
+  color: #4b2707;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Typography */
+/* Header */
+/* Hero */
+/* The Whole Story */
+/* News & Events */
+/* MISC */
+.clearfix::after {
+  visibility: hidden;
+  display: block;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+* html .group {
+  zoom: 1;
+}
+
+*:first-child + html .group {
+  zoom: 1;
+}
+/*# sourceMappingURL=index.css.map */
