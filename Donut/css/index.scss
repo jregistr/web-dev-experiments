@@ -3,6 +3,9 @@ $lightCream: #f2f3ee;
 $orange: #d17f38;
 $yellow: #e8c04f;
 $brown: #4b2707;
+$fontOpenSans: "Open Sans", sans-serif;
+$fontHelveticaSans: Helvetica, Arial, sans-serif;
+$fontLyas: "Love Ya Like A Sister", cursive;
 
 $containerWidth: 500px;
 
@@ -13,16 +16,230 @@ body {
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-family: $fontOpenSans, $fontHelveticaSans;
 }
+
+.container {
+  width: 924px;
+  margin: 0 auto;
+  padding: 30px 24px;
+}
+
 /* Typography */
+h1,
+h2 {
+  color: $orange;
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 44px;
+  margin: 0;
+  font-family: $fontLyas;
+}
+
+#whole-story {
+  h1 {
+    text-align: center;
+    padding: 0 0 20px;
+    background: url(/images/header-divider.png) bottom center no-repeat;
+
+    em {
+      font-style: normal;
+      color: $brown;
+    }
+  }
+}
+
+h2 {
+  font-size: 34px;
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  &.lead {
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+a {
+  &:link {
+    color: $orange;
+  }
+
+  &:visited {
+    color: $orange;
+  }
+
+  &:hover {
+    color: $brown;
+  }
+}
+
+hr {
+  border: none;
+  height: 33px;
+  width: 333px;
+  margin: 30px auto;
+  background: url("/images/divider.png") center center no-repeat;
+}
 
 /* Header */
+header {
+  & > nav {
+    text-align: center;
 
+    & > ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: block;
+      line-height: 141px;
+
+      & > li {
+        display: inline-block;
+        padding: 0 20px;
+
+        a {
+          text-transform: uppercase;
+          text-decoration: none;
+          font-weight: bold;
+        }
+
+        a:hover {
+          color: $brown;
+          padding-top: 20px;
+          background: url("/images/tiny-donut.png") top center no-repeat;
+        }
+      }
+
+      li#logo {
+        a {
+          display: block;
+          width: 292px;
+          height: 141px;
+          background: url("/images/logo.png") center center no-repeat;
+          text-indent: -9999px;
+        }
+
+        a:hover {
+          padding: 0;
+          background: url("/images/logo-hover.png") center center no-repeat;
+        }
+      }
+    }
+  }
+}
 /* Hero */
+#hero {
+  background: $yellow url("/images/bg-tile-yellow.gif") top left repeat;
 
+  .container {
+    position: relative;
+  }
+
+  .large-ribbon {
+    height: 190px;
+    width: 150px;
+    background: url("/images/fresh-whole-ingredients.png") top left no-repeat;
+    text-indent: -9999px;
+    position: absolute;
+    top: -23px;
+    right: -30px;
+  }
+}
 /* The Whole Story */
+#story-excerpt {
+  width: 530px;
+  margin-right: 24px;
+  float: left;
+  font-size: 16px;
+}
 
+#best-donut {
+  background: url("/images/award.png") left center no-repeat;
+  padding: 30px 0 30px 130px;
+  float: left;
+  width: 240px;
+}
 /* News & Events */
+#articles {
+  width: 370px;
+  float: left;
+  margin-right: 24px;
+}
+
+#feature-image {
+  width: 530px;
+  float: left;
+}
+
+#news-events {
+  article {
+    margin: 20px 0;
+    padding-left: 55px;
+
+    &.news {
+      background: url("/images/icon-news.png") top left no-repeat;
+    }
+
+    &.event {
+      background: url("/images/icon-calendar.png") top left no-repeat;
+    }
+
+    & > header {
+      time {
+        color: $orange;
+        font-size: 12px;
+      }
+    }
+
+    & > section {
+      &.news-excerpt {
+        margin: 10px 0;
+      }
+    }
+
+    & > footer {
+      font-size: 12px;
+    }
+  }
+}
+
+/* Footer */
+footer {
+  &.main {
+    background: $brown url("/images/bg-tile-brown.gif") top left repeat;
+    color: $lightCream;
+    padding: 30px 0;
+
+    a:hover {
+      color: $lightCream;
+    }
+
+    #uncopyright,
+    #credits {
+      width: 240px;
+      float: left;
+      padding: 10px 0 10px 50px;
+    }
+
+    #uncopyright {
+      background: url("/images/icon-recycle.png") center left no-repeat;
+    }
+
+    #credits {
+      background: url("/images/icon-apple.png") center left no-repeat;
+      float: right;
+      margin-top: 9px;
+    }
+  }
+}
 
 /* MISC */
 
