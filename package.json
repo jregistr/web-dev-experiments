@@ -1,0 +1,26 @@
+{
+  "name": "web-dev-experiments",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "s-donut": "nodemon --exec './node_modules/.bin/serve -l 3000 ./Donut'",
+    "s-sunshine": "nodemon --exec './node_modules/.bin/serve -l 3001 ./sunshine-markets/'",
+    "all" : "concurrently \"npm:s-*\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:jregistr/web-dev-experiments.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jregistr/web-dev-experiments/issues"
+  },
+  "homepage": "https://github.com/jregistr/web-dev-experiments",
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.3",
+    "serve": "^11.3.0"
+  }
+}
