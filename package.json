@@ -5,7 +5,8 @@
   "scripts": {
     "s-donut": "nodemon --exec './node_modules/.bin/serve -l 3000 ./Donut'",
     "s-sunshine": "nodemon --exec './node_modules/.bin/serve -l 3001 ./sunshine-markets/'",
-    "all" : "concurrently \"npm:s-*\""
+    "s-natours" : "nodemon --exec './node_modules/.bin/serve -l 3002 ./natours/'",
+    "all": "concurrently \"npm:s-*\""
   },
   "repository": {
     "type": "git",
