@@ -19,15 +19,15 @@ body {
     font-size: 16px;
     line-height: 1.7;
     color: #777;
-    padding: 20px;
+    /*padding: 20px;*/
 }
 
 .header {
     height: 95vh;
     background-image: linear-gradient(
             to right bottom,
-            rgba(126, 213, 111, 0.02),
-            rgba(40, 180, 133, 0.5)
+            rgba(126, 213, 111, 0.07),
+            rgba(40, 180, 133, 0.8)
     ), url("../img/hero.jpg");
     background-size: cover;
     background-position: top;
@@ -50,13 +50,16 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: red;
+    /*background-color: red;*/
     transform: translate(-50%, -40%);
+    text-align: center;
 }
 
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
+    backface-visibility: hidden; /* Determines if the back part of an element is visible when we animation something. Fix!?*/
+    margin-bottom: 10px;
 }
 
 .heading-primary span {
@@ -67,10 +70,125 @@ body {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+
+    animation-name: move-in-from-left;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in;
 }
 
 .heading-primary-sub {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17px;
+    animation: move-in-from-right 1.5s ease-out;
+    /*animation-name: move-in-from-right;*/
+    /*animation-duration: 1.5s;*/
+    /*animation-timing-function: ease-out;*/
+}
+
+/*.heading-primary-*/
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 20px;
+    transition: all .2s;
+    position: relative;
+}
+
+.text-tron .btn:link,
+.text-tron .btn:visited {
+    animation: move-in-from-bottom 1.5s ease-in-out .25s;
+    animation-fill-mode: backwards; /* Applies the css of the animation start (0% keyframe) to the item */
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: white;
+    color: #777;
+}
+
+.text-tron .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.text-tron .btn-white::after {
+    background-color: #fff;
+}
+
+.text-tron .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+@keyframes move-in-from-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    60% {
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes move-in-from-right {
+    0% {
+        opacity: 0;
+        transform: translateX(120px);
+    }
+    60% {
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes move-in-from-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+    85% {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+    90% {
+        transform: translateX(10px) rotateZ(1deg);
+    }
+    95% {
+        transform: translateX(-10px) rotateZ(-1deg);
+    }
+    100% {
+        transform: translateX(0) translateZ(0);
+    }
 }
