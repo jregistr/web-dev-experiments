@@ -6,6 +6,7 @@
     "s-donut": "nodemon --exec './node_modules/.bin/serve -l 3000 ./Donut'",
     "s-sunshine": "nodemon --exec './node_modules/.bin/serve -l 3001 ./sunshine-markets/'",
     "s-natours" : "nodemon --exec './node_modules/.bin/serve -l 3002 ./natours/'",
+    "s-natours-bem" : "nodemon --exec './node_modules/.bin/serve -l 3002 ./natours-bem/'",
     "all": "concurrently \"npm:s-*\""
   },
   "repository": {
