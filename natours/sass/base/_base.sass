@@ -1,0 +1,20 @@
+*,
+*::after,
+*::before
+  margin: 0
+  padding: 0
+  box-sizing: inherit
+
+
+html
+  /*But not usually good idea to set root as pixel. Users can change their browsers default*/
+  /*font and by setting this, we're overriding them.*/
+  /*font-size: 10px*/
+
+  /*browser font-size by default is 16 pixels. Let's use percent*/
+  /* This defines what 1rem is */
+  font-size: 62.5%
+
+
+body
+  box-sizing: border-box

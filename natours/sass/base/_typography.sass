@@ -1,0 +1,30 @@
+@import "../abstracts/variables"
+
+body
+  font-family: "Lato", sans-serif
+  font-weight: 400
+  line-height: 1.7
+  color: $color-grey-dark
+
+.heading-primary
+  color: $color-white
+  text-transform: uppercase
+  backface-visibility: hidden /* Determines if the back part of an element is visible when we animation something. Fix!?*/
+  margin-bottom: 1rem
+
+  &--main
+    display: block
+    font-size: 6rem
+    font-weight: 400
+    letter-spacing: 3.5rem
+
+    animation-name: move-in-from-left
+    animation-duration: 1.2s
+    animation-timing-function: ease-in
+
+  &--sub
+    display: block
+    font-size: 2rem
+    font-weight: 700
+    letter-spacing: 1.74rem
+    animation: move-in-from-right 1.5s ease-out
