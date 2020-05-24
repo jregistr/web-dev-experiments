@@ -140,3 +140,31 @@ body {
     left: 50%;
     transform: translate(-50%, -40%);
     text-align: center; }
+
+.grid-row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .grid-row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .grid-row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .grid-row [class^="grid-col-"] {
+    float: left;
+    background-color: orangered; }
+    .grid-row [class^="grid-col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .grid-row .grid-col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .grid-row .grid-col-1-of-3 {
+    width: calc((100% - (2 * 6rem)) / 3); }
+  .grid-row .grid-col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .grid-row .grid-col-1-of-4 {
+    width: calc((100% - (3 * 6rem)) / 4); }
+  .grid-row .grid-col-2-of-4 {
+    width: calc(2 * ((100% - (3 * 6rem)) / 4) + 6rem); }
+  .grid-row .grid-col-3-of-4 {
+    width: calc(3 * ((100% - (3 * 6rem)) / 4) + 2 * 6rem); }
