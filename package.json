@@ -5,8 +5,10 @@
   "scripts": {
     "s-donut": "nodemon --exec './node_modules/.bin/serve -l 3000 ./Donut'",
     "s-sunshine": "nodemon --exec './node_modules/.bin/serve -l 3001 ./sunshine-markets/'",
-    "s-natours" : "nodemon --exec './node_modules/.bin/serve -l 3002 ./natours/'",
-    "s-natours-bem" : "nodemon --exec './node_modules/.bin/serve -l 3002 ./natours-bem/'",
+    "s-natours--legacy": "nodemon --exec './node_modules/.bin/serve -l 3002 natours-legacy/'",
+    "z-natours-bem-compile-sass" : "./node_modules/.bin/node-sass -w -o natours/css/  natours/sass/*.sass",
+    "z-natours-bem-serve" : "./node_modules/.bin/live-server --watch='css/,img/,index.html' --wait=500 --no-browser --port=3003 natours/",
+    "s-natours" : "concurrently 'npm:z-*'",
     "all": "concurrently \"npm:s-*\""
   },
   "repository": {
@@ -22,6 +24,8 @@
   "homepage": "https://github.com/jregistr/web-dev-experiments",
   "devDependencies": {
     "concurrently": "^5.1.0",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.14.1",
     "nodemon": "^2.0.3",
     "serve": "^11.3.0"
   }
