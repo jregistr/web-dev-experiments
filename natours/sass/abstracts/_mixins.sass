@@ -3,3 +3,9 @@
     content: ""
     display: table
     clear: both
+
+@mixin gradient-text-right($color-left, $color-right)
+  display: inline-block
+  -webkit-background-clip: text
+  background-image: linear-gradient(to right, $color-left, $color-right)
+  color: transparent
