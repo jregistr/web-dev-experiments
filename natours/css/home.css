@@ -14,4 +14,8 @@
 .section-tours {
   margin-top: -12vh;
   background-color: #f7f7f7;
-  padding: 25rem 0 15rem 0; }
+  padding: 25rem 0 10rem 0; }
+
+.section-stories {
+  padding: 15rem 0;
+  background-color: #f7f7f7; }
